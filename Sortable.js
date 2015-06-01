@@ -213,7 +213,7 @@
 
 		// Bind events
 		_on(el, 'mousedown', this._onTapStart);
-		_on(el, 'touchstart', this._onTapStart);
+		_on(el, 'touchmove', this._onTapStart);
 
 		_on(el, 'dragover', this);
 		_on(el, 'dragenter', this);
@@ -843,7 +843,7 @@
 			el[expando] = null;
 
 			_off(el, 'mousedown', this._onTapStart);
-			_off(el, 'touchstart', this._onTapStart);
+			_off(el, 'touchmove', this._onTapStart);
 
 			_off(el, 'dragover', this);
 			_off(el, 'dragenter', this);
